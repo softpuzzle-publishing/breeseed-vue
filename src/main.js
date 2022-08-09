@@ -5,6 +5,7 @@ import globalMixin from "./mixins/global";
 import mitt from "mitt";
 import { SetupCalendar } from "v-calendar";
 import ResourceManager from "@/plugins/resource_manager";
+import ui from "@/assets/scripts/ui";
 
 const emitter = mitt();
 const app = createApp(App).directive("hoist", el => {

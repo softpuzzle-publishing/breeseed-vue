@@ -6,6 +6,10 @@ const routes = [
     component: () => import("./views/Intro")
   },
   {
+    path: "/first",
+    component: () => import("./views/First")
+  },
+  {
     path: "/login",
     component: () => import("./views/Login")
   }

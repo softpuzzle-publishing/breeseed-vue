@@ -1,36 +1,39 @@
 <template>
   <main id="main">
-    <div class="login-wrap">
-      <div class="d-flex flex-column h-100">
+    <div class="d-flex flex-column h-100">
         <div class="flex-grow-1">
-          <div class="d-flex flex-column justify-content-center h-100">
-            <div class="login-logo">
-              <img src="../assets/images/logo.svg" alt="BreeSeed LOGO" />
+            <div class="mb-5">
+                <label for="" class="form-label">아이디/휴대폰 번호</label>
+                <div class="position-relative">
+                    <input type="text" class="form-control" id="" placeholder="아이디 또는 휴대폰 번호(숫자) 입력">
+                    <button type="button" class="btn-input-x" aria-label="삭제"><i class="icon-x"></i></button>
+                </div>
+                <p class="valid-feedback" style="display: block">인증하기 버튼을 클릭해주세요.</p>
             </div>
-            <div class="login-type mt-8">
-              <button type="button" class="btn btn-light w-100">
-                <i class="icon-login-kakao"></i>카카오로 이용하기
-                <span class="tip">3초만에 빠른 회원가입</span>
-              </button>
-              <button type="button" class="btn btn-light w-100 mt-4">
-                <i class="icon-login-apple"></i>Apple로 이용하기
-              </button>
-              <button
-                type="button"
-                class="btn btn-light w-100 mt-4"
-                onclick="document.location.href='../join/join_step_1.html'"
-              >
-                <i class="icon-login-logo"></i>로그인/회원가입
-              </button>
+            <div>
+                <label for="" class="form-label">비밀번호</label>
+                <div class="position-relative">
+                    <input type="tel" class="form-control" id="" placeholder="비밀번호 입력">
+                    <button type="button" class="btn-type-toggle" aria-label="입력내용 보기"><i class="icon-eye-off"></i></button>
+                    <button type="button" class="btn-input-x" aria-label="삭제"><i class="icon-x"></i></button>
+                </div>
+                <p class="invalid-feedback" style="display: block">인증번호가 일치하지 않습니다.</p>
             </div>
-          </div>
+            <div class="login-menu">
+                <a href="id_find.html">아이디 찾기</a>
+                <span class="bar"></span>
+                <a href="password_reset_1.html">비밀번호 재설정</a>
+            </div>
         </div>
-        <div class="bottom mt-5">
-          <p class="copyright">
-            © 2022 Medi Plus Solution Co. Ltd. All rights reserved
-          </p>
+        <div class="bottom">
+            <div class="already-join">
+                <p class="me-2">계정이 없으신가요?</p>
+                <a href="../login/login.html" class="text-primary text-underline">회원가입</a>
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="button" onclick="document.location.href='../join/join_step_1.html'">로그인</button>
+            </div>
         </div>
-      </div>
     </div>
   </main>
 </template>
@@ -45,49 +48,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.login-wrap {
-  margin: -30px -30px 0;
-  background: $primary;
-  height: 100vh;
-  padding: 30px 30px 15px;
-}
-.copyright {
-  color: #fff;
-  font-size: 13px;
-  letter-spacing: -0.5px;
-  text-align: center;
-}
-
-.login-type {
-  .btn {
-    position: relative;
-  }
-  i[class^="icon"] {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .tip {
-    background: #ffee00;
-    font-size: 13px;
-    color: #312227;
-    padding: 5px 15px;
-    border-radius: 10px;
-    position: absolute;
-    left: 5px;
-    top: -43px;
-    &::before {
-      content: "";
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 10px 6px 0 6px;
-      border-color: #ffee00 transparent transparent transparent;
-      position: absolute;
-      left: 19px;
-      bottom: -10px;
-    }
-  }
-}
 </style>
