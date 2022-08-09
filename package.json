@@ -1,0 +1,70 @@
+{
+  "name": "second-wind-pub-vue",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.2.0-beta1",
+    "core-js": "^3.6.5",
+    "mitt": "^3.0.0",
+    "popper.js": "^1.16.1",
+    "swiper": "^6.8.4",
+    "v-calendar": "^3.0.0-alpha.8",
+    "vue": "^3.2.13",
+    "vue-chart-3": "^3.1.8",
+    "vue-router": "^4.0.11",
+    "vue3-lottie": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/vue3": "^6.4.19",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.2.13",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.4",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-vue": "^7.0.0",
+    "html-loader": "^0.5.5",
+    "sass": "^1.49.9",
+    "sass-loader": "^10.2.1",
+    "style-resources-loader": "^1.4.1",
+    "vue-cli-plugin-style-resources-loader": "~0.1.5",
+    "vue-loader": "^16.8.3",
+    "vuex": "^4.0.2",
+    "webpack": "^4.46.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

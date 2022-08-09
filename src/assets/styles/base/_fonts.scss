@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    src: url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-DemiLight.eot);
+    src: url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-DemiLight.eot?#iefix) format('embedded-opentype'),
+        url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-DemiLight.woff) format('woff'),
+        url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-DemiLight.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+    src: url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Regular.eot);
+    src: url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Regular.eot?#iefix) format('embedded-opentype'),
+        url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Regular.woff) format('woff'),
+        url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-weight: 500;
+    src: url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Medium.eot);
+    src: url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Medium.eot?#iefix) format('embedded-opentype'),
+        url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Medium.woff) format('woff'),
+        url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-weight: 700;
+    src: url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Bold.eot);
+    src: url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Bold.eot?#iefix) format('embedded-opentype'),
+        url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Bold.woff) format('woff'),
+        url(#{$FONT_PATH}/NotoSansCJKkr/NotoSansCJKkr-Bold.ttf) format('truetype');
+}

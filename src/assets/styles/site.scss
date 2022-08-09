@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+// Vendors
+@import
+'abstracts/variables',
+'base/fonts',
+'vendors/bootstrap/bootstrap',
+'~swiper/swiper-bundle.css';
+
+// Base stuff
+@import
+'base/icons',
+'base/helpers',
+'common',
+'layout',
+'content';
+
