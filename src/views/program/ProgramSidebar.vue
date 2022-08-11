@@ -29,7 +29,21 @@
 export default {
   name: "ProgramSidebar",
 
-  mounted() {}
+  mounted() {
+    //사이드바 navi
+    document.querySelectorAll(".theme-order a").forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document
+          .querySelector(".theme-order .active")
+          .classList.remove("active");
+        this.parentElement.classList.add("active");
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  }
 };
 </script>
 

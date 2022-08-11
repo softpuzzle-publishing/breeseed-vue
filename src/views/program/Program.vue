@@ -36,25 +36,6 @@ export default {
     setTimeout(function() {
       document.querySelector(".program").classList.add("show");
     }, 10);
-
-    //사이드바 navi
-    document.querySelectorAll(".theme-order a").forEach(anchor => {
-      anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document
-          .querySelector(".theme-order .active")
-          .classList.remove("active");
-        this.parentElement.classList.add("active");
-        /* document.querySelector(this.getAttribute("href")).scrollIntoView({
-          behavior: "smooth"
-        }); */
-        const t = this.getAttribute("href");
-        console.log(t);
-        document.querySelector(t).scrollIntoView({
-          behavior: "smooth"
-        });
-      });
-    });
   },
   setup() {}
 };
@@ -69,10 +50,8 @@ export default {
   opacity: 0;
   transition: opacity 0.25s 0.05s;
   margin-left: $SIDEBAR_WIDTH;
-  margin-top: -30px;
-  padding-top: 0px;
   height: 100%;
-  padding: 76px 0 0;
+  padding: 46px 0 60px;
   overflow-y: auto;
   overflow-x: hidden;
   &::-webkit-scrollbar {
