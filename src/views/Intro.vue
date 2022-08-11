@@ -1,7 +1,7 @@
 <template>
   <div class="intro">
     <div class="skip">
-      <a href="../login/index.html" class="text-underline">건너뛰기</a>
+      <router-link to="/first" class="text-underline">건너뛰기</router-link>
     </div>
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -72,8 +72,8 @@
       <div class="swiper-pagination"></div>
     </div>
     <div class="start">
-      <a href="../login/index.html" class="btn btn-light w-100 text-primary"
-        >시작하기</a
+      <router-link to="/first" class="btn btn-light w-100 text-primary"
+        >시작하기</router-link
       >
     </div>
   </div>
@@ -85,7 +85,7 @@ import Swiper, { Navigation, Pagination } from "swiper";
 Swiper.use([Navigation, Pagination]);
 
 export default {
-  name: "Login",
+  name: "Intro",
   components: {},
   mounted() {
     const introSwiper = new Swiper(".intro .swiper-container", {

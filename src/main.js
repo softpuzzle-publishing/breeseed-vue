@@ -3,10 +3,12 @@ import App from "./App.vue";
 import router from "./router.js";
 import globalMixin from "./mixins/global";
 import mitt from "mitt";
+//import { CommonStore } from "./store/common_store";
 import { SetupCalendar } from "v-calendar";
 import ResourceManager from "@/plugins/resource_manager";
-import ui from "@/assets/scripts/ui";
+import "bootstrap";
 
+//const store = CommonStore;
 const emitter = mitt();
 const app = createApp(App).directive("hoist", el => {
   if (!el) {
@@ -28,6 +30,7 @@ const app = createApp(App).directive("hoist", el => {
 });
 
 app.mixin(globalMixin);
+//app.use(store);
 app.use(SetupCalendar, {});
 
 global.env = process.env;

@@ -6,7 +6,7 @@
           type="button"
           class="btn-back"
           aria-label="뒤로"
-          onclick="window.history.back()"
+          @click="$router.go(-1)"
         >
           <i class="icon-back"></i>
         </button>

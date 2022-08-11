@@ -1,6 +1,12 @@
 <template>
   <div id="wrap">
-    <TheHeader v-if="$route.path !== '/' && $route.path !== '/first'" />
+    <TheHeader
+      v-if="
+        $route.path !== '/' &&
+          $route.path !== '/first' &&
+          $route.path !== '/home'
+      "
+    />
     <div id="container">
       <slot />
     </div>

@@ -5,23 +5,26 @@
         <div class="flex-grow-1">
           <div class="d-flex flex-column justify-content-center h-100">
             <div class="login-logo">
-              <img src="../assets/images/logo.svg" alt="BreeSeed LOGO" />
+              <img
+                :src="resourceManager.getIMG('/logo.svg')"
+                alt="BreeSeed LOGO"
+              />
             </div>
             <div class="login-type mt-8">
-              <button type="button" class="btn btn-light w-100">
-                <i class="icon-login-kakao"></i>카카오로 이용하기
-                <span class="tip">3초만에 빠른 회원가입</span>
-              </button>
-              <button type="button" class="btn btn-light w-100 mt-4">
-                <i class="icon-login-apple"></i>Apple로 이용하기
-              </button>
-              <button
-                type="button"
-                class="btn btn-light w-100 mt-4"
-                @click="$router.push('/login')"
+              <VButton type="button" color="btn-light" class="w-100"
+                ><i class="icon-login-kakao"></i>카카오로 이용하기
+                <span class="tip">3초만에 빠른 회원가입</span></VButton
               >
-                <i class="icon-login-logo"></i>로그인/회원가입
-              </button>
+              <VButton type="button" color="btn-light" class="w-100 mt-4"
+                ><i class="icon-login-apple"></i>Apple로 이용하기</VButton
+              >
+              <VButton
+                type="button"
+                color="btn-light"
+                class="w-100 mt-4"
+                @click="$router.push('/login')"
+                ><i class="icon-login-logo"></i>로그인/회원가입</VButton
+              >
             </div>
           </div>
         </div>
@@ -36,9 +39,13 @@
 </template>
 
 <script>
+import VButton from "@/templates/elements/VButton";
+
 export default {
   name: "First",
-  components: {},
+  components: {
+    VButton
+  },
 
   setup() {}
 };

@@ -1,0 +1,65 @@
+<template>
+  <main id="main">
+    <div class="d-flex flex-column h-100">
+      <div class="flex-grow-1">
+        <div class="bottom-padding">
+          <div class="text-desc">
+            파이브데이명상설명문구두줄파이브데이명상설명문오십자두줄
+            파이브데이명상설명문구두줄파이브데이
+          </div>
+          <div class="text-center m-t-30">
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="voice"
+                id="voiceMail"
+                checked
+              />
+              <label class="form-check-label" for="voiceMail">
+                남자 보이스
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="voice"
+                id="voiceFeail"
+              />
+              <label class="form-check-label" for="voiceFeail">
+                여자 보이스
+              </label>
+            </div>
+          </div>
+          <h2 class="title-line-through m-t-40">Day 1</h2>
+          <div class="program-item">
+            <a href="#none" class="program-thumb day5">
+              <img :src="resourceManager.getIMG('/@thumbnail.png')" />
+            </a>
+            <div class="program-title">
+              파이브데이데이원프로그램명들어갈글자수스물두자
+            </div>
+            <div class="program-type">10분</div>
+            <div class="program-desc">
+              파이브데이프로그램설명파이브데이 프로그램설명파이브데이프로그램설
+              명파이브데이프로그램설명파이브데이프 로그램슬
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>
+
+<script>
+export default {
+  name: "Day5List",
+  components: {},
+
+  mounted() {},
+  setup() {}
+};
+</script>
+
+<style lang="scss" scoped></style>

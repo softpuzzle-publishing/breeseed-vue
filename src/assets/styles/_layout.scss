@@ -1,3 +1,9 @@
+$Z_INDEX_HEADER: 10 !default;
+$Z_INDEX_SIDEBAR: 11 !default;
+$Z_INDEX_MENUBAR: 12 !default;
+$Z_INDEX_VOICE_CHOICE: $Z_INDEX_HEADER !default;
+$Z_INDEX_GROW_SEED: calc($Z_INDEX_HEADER + 1) !default;
+
 html,
 body{width: 100%;height: 100%;}
 body{overflow-x: hidden;}
@@ -13,14 +19,14 @@ body{overflow-x: hidden;}
 
 #container{flex-grow: 1;height: 100%;}
 
-#main{height: 100%;padding: 30px;width: 100%;
+#main{height: 100%;padding: 30px 30px 0;width: 100%;
     &.p-b-30{
         padding-bottom: calc(constant(safe-area-inset-bottom) + 30px) !important;
         padding-bottom: calc(env(safe-area-inset-bottom) + 30px) !important;
     }
 }
 
-.page-title{font-size: 18px;line-height: 50px;margin-bottom: 0;text-align: center;padding: 0 40px;}
+.page-title{font-size: 18px;line-height: 50px;height: 50px;margin-bottom: 0;text-align: center;padding: 0 40px;}
 .btn-back{position: absolute;left: 0;top: 50%;transform: translateY(-50%);}
 
 .bottom{
@@ -48,16 +54,16 @@ body{overflow-x: hidden;}
         }
     }
     .menu-meditation{
-        span::before{background-image: url('#{$IMG_PATH}/icon-gnb-seed-off.svg');}
-        &.active span::before{background-image: url('#{$IMG_PATH}/icon-gnb-seed-on.svg');}
+        span::before{background-image: url('../images/icon-gnb-seed-off.svg');}
+        &.active span::before{background-image: url('../images/icon-gnb-seed-on.svg');}
     }
     .menu-home{
-        span::before{background-image: url('#{$IMG_PATH}/icon-gnb-menu-off.svg');}
-        &.active span::before{background-image: url('#{$IMG_PATH}/icon-gnb-menu-on.svg');}
+        span::before{background-image: url('../images/icon-gnb-menu-off.svg');}
+        &.active span::before{background-image: url('../images/icon-gnb-menu-on.svg');}
     }
     .menu-my{
-        span::before{background-image: url('#{$IMG_PATH}/icon-gnb-person-off.svg');}
-        &.active span::before{background-image: url('#{$IMG_PATH}/icon-gnb-person-on.svg');}
+        span::before{background-image: url('../images/icon-gnb-person-off.svg');}
+        &.active span::before{background-image: url('../images/icon-gnb-person-on.svg');}
     }
 }
 
@@ -72,7 +78,7 @@ body{overflow-x: hidden;}
 }
 .company-info-toggler{
     height: 60px;display: flex;align-items: center;color: #fff;font-size: 18px;position: relative;padding-right: 40px;border-bottom: 1px solid #ccc;margin-bottom: 20px;
-    &::before{content: '';background: url('#{$IMG_PATH}/icon-arrow-right.svg') no-repeat 0 0;width: 30px;height: 30px;background-size: contain;position: absolute;right: 0;top: 50%;margin-top: -15px;transform: rotate(90deg);}
+    &::before{content: '';background: url('../images/icon-arrow-right.svg') no-repeat 0 0;width: 30px;height: 30px;background-size: contain;position: absolute;right: 0;top: 50%;margin-top: -15px;transform: rotate(90deg);}
     &[aria-expanded="true"]::before{transform: rotate(270deg);}
 }
 .copyright{font-size: 13px;letter-spacing: -0.52px;}

@@ -9,7 +9,7 @@
 }
 
 .join-step{
-    margin-bottom: 30px;
+    margin-bottom: 30px;padding-top: 36px;margin-top: -30px;
     .dot{
         display: inline-block;width: 7px;height: 7px;border-radius: 50%;background-color: $primary;position: relative;margin: 0 17px;position: absolute;top: 50%;right: 44px;margin-top: -3.5px;
         &::before,
@@ -22,13 +22,13 @@
         display: flex;justify-content: center;align-items: center;border: 2px solid $primary;background: $primary;color: #fff;width: 36px;height: 36px;border-radius: 50%;text-align: center;position: relative;margin-left: 60px;
         &::before{content: '';display: inline-block;width: 36px;height: 36px;position: absolute;left: 50%;top: -36px;transform: translateX(-50%);background-position: 0 0;background-repeat: no-repeat;}
         &:nth-child(1){
-            &::before{background-image: url('#{$IMG_PATH}/icon-join-step1.svg');}
+            &::before{background-image: url('../images/icon-join-step1.svg');}
         }
         &:nth-child(2){
-            &::before{background-image: url('#{$IMG_PATH}/icon-join-step2.svg');}
+            &::before{background-image: url('../images/icon-join-step2.svg');}
         }
         &:nth-child(3){
-            &::before{background-image: url('#{$IMG_PATH}/icon-join-step3.svg');}
+            &::before{background-image: url('../images/icon-join-step3.svg');}
         }
         &:first-of-type{
             margin-left: 0;
@@ -50,13 +50,13 @@
 .time-count{color: $gray;font-size: 15px;}
 
 .congratulation{
-    background: url('#{$IMG_PATH}/icon-join-finish-logo.svg') no-repeat 0 30px;padding-top: 130px;
+    background: url('../images/icon-join-finish-logo.svg') no-repeat 0 30px;padding-top: 130px;
 }
 
 .code-swipe{
     margin-top: 80px;display: flex;align-items: center;justify-content: flex-end;margin-right: -30px;transition: transform .2s;overflow: hidden;
     .text-end{
-        background: url('#{$IMG_PATH}/icon-code.svg') no-repeat 100% 0;padding-top: 26px;
+        background: url('../images/icon-code.svg') no-repeat 100% 0;padding-top: 26px;
         strong{font-weight: 400;font-size: 18px;}
         p{color: $gray;font-size: 13px;letter-spacing: -0.52px;}
     }
@@ -69,7 +69,7 @@
             height: 100%;position: relative;
             .swipe-btn {
                 cursor: pointer;display: block;position: absolute;left: 0;top: 0;background: #f8f8f8;border-radius: 50rem 0 0 50rem;width: 300px;height: 100%;
-                i{width: 21px;height: 19px;background: url('#{$IMG_PATH}/icon-swipe-arrow.svg') no-repeat 0 0;position: absolute;left: 20px;top: 50%;transform: translateY(-50%);}
+                i{width: 21px;height: 19px;background: url('../images/icon-swipe-arrow.svg') no-repeat 0 0;position: absolute;left: 20px;top: 50%;transform: translateY(-50%);}
             }
             .swipe-btn.back-to-start {
                 -webkit-transition: -webkit-transform .5s ease-in-out;
@@ -109,8 +109,8 @@
     .form-range{margin: 0 12px;}
     .icon-horn-off,
     .icon-horn-on{width: 30px;height: 30px;flex: 0 0 30px}
-    .icon-horn-off{background-image: url('#{$IMG_PATH}/icon-horn-off.svg');}
-    .icon-horn-on{background-image: url('#{$IMG_PATH}/icon-horn-on.svg');}
+    .icon-horn-off{background-image: url('../images/icon-horn-off.svg');}
+    .icon-horn-on{background-image: url('../images/icon-horn-on.svg');}
 }
 
 .feeling-choice{
@@ -118,16 +118,16 @@
     input[type=radio]{
         position: absolute;width: 0;height: 0;overflow: hidden;
         &:checked + label{
-            span.bad{background-image: url('#{$IMG_PATH}/feel-bad-on.svg');}
-            span.good{background-image: url('#{$IMG_PATH}/feel-good-on.svg');}
+            span.bad{background-image: url('../images/feel-bad-on.svg');}
+            span.good{background-image: url('../images/feel-good-on.svg');}
         }
     }
     label{
         display: block;text-align: center;flex: 0 0 50%;font-size: 15px;color: #aaa;
         span{
             display: block; width: 90px;height: 90px;background-size: contain;background-repeat: no-repeat;background-position: 50% 0;margin: 0 auto 10px;
-            &.bad{background-image: url(#{$IMG_PATH}/feel-bad-off.svg);}
-            &.good{background-image: url(#{$IMG_PATH}/feel-good-off.svg);}
+            &.bad{background-image: url(../images/feel-bad-off.svg);}
+            &.good{background-image: url(../images/feel-good-off.svg);}
         }
     }
 }
@@ -138,8 +138,12 @@
     .modal.show &{
         &::before{top: -160px;opacity: 1;}
     }
-    &.grow-up-success-1{
-        &::before{background: url('#{$IMG_PATH}/bg-grow-up-1.svg') no-repeat 50% 100%;}
+    &[class^=grow-up-success]{
+        &::before{background-repeat: no-repeat;background-position: 0 0;}
+        &.grow-up-success-1::before{background-image: url('../images/bg-grow-up-1.svg');}
+        &.grow-up-success-2::before{background-image: url('../images/bg-grow-up-2.svg');}
+        &.grow-up-success-3::before{background-image: url('../images/bg-grow-up-3.svg');}
+        &.grow-up-success-4::before{background-image: url('../images/bg-grow-up-4.svg');}
     }
 }
 
@@ -166,9 +170,9 @@
         em{font-size: 18px;}
         p{font-size: 15px;letter-spacing: -0.6px;margin-top: 20px;text-align: center;line-height: 1.4;}
     }
-    .intro-item-1{background-image: url('#{$IMG_PATH}/bg-intro-1.svg');}
-    .intro-item-2{background-image: url('#{$IMG_PATH}/bg-intro-2.svg');}
-    .intro-item-3{background-image: url('#{$IMG_PATH}/bg-intro-3.svg');}
+    .intro-item-1{background-image: url('../images/bg-intro-1.svg');}
+    .intro-item-2{background-image: url('../images/bg-intro-2.svg');}
+    .intro-item-3{background-image: url('../images/bg-intro-3.svg');}
     .skip{
         position: absolute;left: 50%;bottom: 30px;z-index: 99;transform: translateX(-50%);
         bottom: 30px;
@@ -190,7 +194,7 @@
 
 .back-area{
     position: absolute;left: 0;right: 0;top: 0;z-index: -1;padding: 50px 30px 0;height: 300px;
-    .bg{background: $primary url('#{$IMG_PATH}/bg-around.svg') no-repeat 50% 0;background-size: 100% auto;position: fixed;left: 0;right: 0;top: 0;height: 300px;}
+    .bg{background: $primary url('../images/bg-around.svg') no-repeat 50% 0;background-size: 100% auto;position: fixed;left: 0;right: 0;top: 0;height: 300px;}
     .group{position: absolute;bottom: 126px;left: 30px;right: 30px;}
     .logo{color: #fff;font-size: 32px;font-weight: 400;margin-bottom: 20px;}
     .special{
@@ -200,7 +204,7 @@
 
 .around{
     position: relative;background: #fff;border-radius: 20px 20px 0 0;padding: 30px;margin-top: 190px;
-    &::before{content: '';width: 45px;height: 58px;background: url('#{$IMG_PATH}/icon-plant.svg') no-repeat 0 0;position: absolute;left: 40px;top: -58px;}
+    &::before{content: '';width: 45px;height: 58px;background: url('../images/icon-plant.svg') no-repeat 0 0;position: absolute;left: 40px;top: -58px;}
     > section + section{margin-top: 50px;}
     section{
         .text-heading{margin-bottom: 10px;}
@@ -226,9 +230,10 @@
     padding: 40px 30px 30px;
     padding-bottom: calc(constant(safe-area-inset-bottom) + 30px);
     padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
-    .program{font-size: 18px;letter-spacing: -0.72px;margin-bottom: 20px;}
+    h2{font-size: 18px;letter-spacing: -0.72px;margin-bottom: 20px;}
     .program-item{
         .program-title,
+        .program-type,
         .program-desc{color: #fff;}
     }
 }
@@ -293,8 +298,8 @@ $SIDEBAR_WIDTH: 75px;
 }
 
 .go-stage-map{width: $SIDEBAR_WIDTH; position: absolute;left: 0;top: 0;height: 50px;background: $primary;display: flex;align-items: center;justify-content: center;}
-.btn-stage-map{background: url('#{$IMG_PATH}/icon-map.svg') no-repeat 0 0;width: 30px;height: 30px;}
-.btn-grow-seed{display: inline-block;background: url('#{$IMG_PATH}/icon-flower.svg') no-repeat 0 0;width: 30px;height: 30px;position: fixed;right: 30px;top: 10px;z-index: $Z_INDEX_GROW_SEED;}
+.btn-stage-map{background: url('../images/icon-map.svg') no-repeat 0 0;width: 30px;height: 30px;}
+.btn-grow-seed{display: inline-block;background: url('../images/icon-flower.svg') no-repeat 0 0;width: 30px;height: 30px;position: fixed;right: 30px;top: 10px;z-index: $Z_INDEX_GROW_SEED;}
 
 .voice-choice{
     position: fixed;background: #fff;height: 47px;top: 49px;left:calc(29px + $SIDEBAR_WIDTH);right: 29px;display: flex;align-items: center;z-index: $Z_INDEX_VOICE_CHOICE;
