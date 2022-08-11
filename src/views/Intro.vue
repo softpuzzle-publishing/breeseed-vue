@@ -106,4 +106,102 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+.intro {
+  height: 100%;
+  position: relative;
+  .swiper-container,
+  .swiper-wrapper {
+    height: 100%;
+  }
+  .swiper-slide {
+    color: #fff;
+    overflow: hidden;
+  }
+  .swiper-pagination {
+    bottom: 95px;
+    .swiper-pagination-bullet {
+      width: 13px;
+      height: 13px;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.39);
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      border-color: #fff;
+      background: #fff;
+    }
+  }
+  .intro-item {
+    height: 100%;
+    text-align: center;
+    background: #3b7d47;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 120px;
+    strong {
+      font-size: 24px;
+      line-height: 1.5;
+      letter-spacing: -0.8px;
+      font-weight: 400;
+    }
+    em {
+      font-size: 18px;
+    }
+    p {
+      font-size: 15px;
+      letter-spacing: -0.6px;
+      margin-top: 20px;
+      text-align: center;
+      line-height: 1.4;
+    }
+  }
+  .intro-item-1 {
+    background-image: url("#{$IMG_PATH}/bg-intro-1.svg");
+  }
+  .intro-item-2 {
+    background-image: url("#{$IMG_PATH}/bg-intro-2.svg");
+  }
+  .intro-item-3 {
+    background-image: url("#{$IMG_PATH}/bg-intro-3.svg");
+  }
+  .skip {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    z-index: 99;
+    transform: translateX(-50%);
+    bottom: 30px;
+    bottom: calc(constant(safe-area-inset-bottom) + 30px);
+    bottom: calc(env(safe-area-inset-bottom) + 30px);
+    a {
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+  .start {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 15px;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s 0.1s;
+    bottom: calc(constant(safe-area-inset-bottom) + 15px);
+    bottom: calc(env(safe-area-inset-bottom) + 15px);
+  }
+  &[data-active-index="2"] {
+    .start {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+</style>

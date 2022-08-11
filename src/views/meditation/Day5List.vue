@@ -8,35 +8,22 @@
             파이브데이명상설명문구두줄파이브데이
           </div>
           <div class="text-center m-t-30">
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="voice"
-                id="voiceMail"
-                checked
-              />
-              <label class="form-check-label" for="voiceMail">
-                남자 보이스
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="voice"
-                id="voiceFeail"
-              />
-              <label class="form-check-label" for="voiceFeail">
-                여자 보이스
-              </label>
-            </div>
+            <VRadio
+              id="voiceMail"
+              name="voice"
+              class="form-check-inline"
+              checked
+              >남자 보이스</VRadio
+            >
+            <VRadio id="voiceFemail" name="voice" class="form-check-inline"
+              >여자 보이스</VRadio
+            >
           </div>
           <h2 class="title-line-through m-t-40">Day 1</h2>
           <div class="program-item">
-            <a href="#none" class="program-thumb day5">
+            <router-link to="" class="program-thumb day5">
               <img :src="resourceManager.getIMG('/@thumbnail.png')" />
-            </a>
+            </router-link>
             <div class="program-title">
               파이브데이데이원프로그램명들어갈글자수스물두자
             </div>
@@ -53,9 +40,13 @@
 </template>
 
 <script>
+import VRadio from "@/templates/elements/VRadio";
+
 export default {
   name: "Day5List",
-  components: {},
+  components: {
+    VRadio
+  },
 
   mounted() {},
   setup() {}

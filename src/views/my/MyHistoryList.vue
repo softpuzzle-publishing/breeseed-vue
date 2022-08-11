@@ -4,7 +4,7 @@
       <div class="flex-grow-1">
         <ol>
           <li class="program-item program-item-history">
-            <a href="history_detail.html">
+            <router-link to="/my-history-detail">
               <div class="program-thumb">
                 <img :src="resourceManager.getIMG('/@thumbnail.png')" />
               </div>
@@ -19,10 +19,10 @@
                 <div class="program-code">주문코드 : MXG0BK7D4A</div>
                 <div class="program-price">9,900원</div>
               </div>
-            </a>
+            </router-link>
           </li>
           <li class="program-item program-item-history">
-            <a href="history_detail.html">
+            <router-link to="/my-history-detail">
               <div class="program-thumb">
                 <img :src="resourceManager.getIMG('/@thumbnail.png')" />
               </div>
@@ -37,11 +37,11 @@
                 <div class="program-code">주문코드 : MXG0BK7D4A</div>
                 <div class="program-price">9,900원</div>
               </div>
-            </a>
+            </router-link>
             <div class="invalid-feedback d-block">2022-05-13 환불완료</div>
           </li>
           <li class="program-item program-item-history">
-            <a href="history_detail.html">
+            <router-link to="/my-history-detail">
               <div class="program-thumb">
                 <img :src="resourceManager.getIMG('/@thumbnail.png')" />
               </div>
@@ -56,7 +56,7 @@
                 <div class="program-code">주문코드 : MXG0BK7D4A</div>
                 <div class="program-price">9,900원</div>
               </div>
-            </a>
+            </router-link>
             <div class="valid-feedback d-block">
               2022-05-13 프로그램 이용 시작
             </div>

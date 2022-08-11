@@ -110,4 +110,82 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.congratulation {
+  background: url("#{$IMG_PATH}/icon-join-finish-logo.svg") no-repeat 0 30px;
+  padding-top: 130px;
+}
+
+.code-swipe {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: -30px;
+  transition: transform 0.2s;
+  overflow: hidden;
+  .text-end {
+    background: url("#{$IMG_PATH}/icon-code.svg") no-repeat 100% 0;
+    padding-top: 26px;
+    strong {
+      font-weight: 400;
+      font-size: 18px;
+    }
+    p {
+      color: $gray;
+      font-size: 13px;
+      letter-spacing: -0.52px;
+    }
+  }
+  .swipe-area {
+    position: relative;
+    width: 60px;
+    height: 118px;
+    margin-left: 20px;
+    .swipe {
+      background: #f8f8f8;
+      border-radius: 50rem 0 0 50rem;
+      width: 120px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .swiper {
+      height: 100%;
+      position: relative;
+      .swipe-btn {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #f8f8f8;
+        border-radius: 50rem 0 0 50rem;
+        width: 300px;
+        height: 100%;
+        i {
+          width: 21px;
+          height: 19px;
+          background: url("#{$IMG_PATH}/icon-swipe-arrow.svg") no-repeat 0 0;
+          position: absolute;
+          left: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      .swipe-btn.back-to-start {
+        -webkit-transition: -webkit-transform 0.5s ease-in-out;
+        transition: -webkit-transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out,
+          -webkit-transform 0.5s ease-in-out;
+        -webkit-transform: translateX(0) !important;
+        transform: translateX(0) !important;
+      }
+      .swipe-end {
+        height: 100%;
+      }
+    }
+  }
+}
+</style>

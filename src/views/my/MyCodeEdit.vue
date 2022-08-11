@@ -59,17 +59,10 @@
             </div>
           </div>
           <div class="agree point m-t-5">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="agree"
-              />
-              <label class="form-check-label" for="agree">
-                제 3자 정보제공 동의 <span class="text-primary">(필수)</span>
-              </label>
-            </div>
+            <VCheckbox id="agree"
+              >제 3자 정보제공 동의
+              <span class="text-primary">(필수)</span></VCheckbox
+            >
           </div>
         </div>
       </div>
@@ -86,13 +79,15 @@
 import VButton from "@/templates/elements/VButton";
 import VInputTextField from "@/templates/elements/VInputTextField";
 import VButtonInputDelete from "@/templates/elements/VButtonInputDelete";
+import VCheckbox from "@/templates/elements/VCheckbox";
 
 export default {
   name: "MyCodeEdit",
   components: {
     VButton,
     VInputTextField,
-    VButtonInputDelete
+    VButtonInputDelete,
+    VCheckbox
   },
 
   setup() {}

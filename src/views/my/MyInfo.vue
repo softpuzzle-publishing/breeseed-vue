@@ -102,4 +102,27 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.info-list {
+  border-top: 1px solid #000;
+  > li {
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    font-size: 15px;
+  }
+  .label {
+    color: $gray;
+  }
+  .data {
+    text-align: right;
+    flex-grow: 1;
+  }
+  [class^="icon-login-"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 4px;
+  }
+}
+</style>

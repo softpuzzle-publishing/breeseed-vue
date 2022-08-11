@@ -6,18 +6,18 @@
           <h2 class="menu-title">필수항목</h2>
           <ul class="menu-list">
             <li>
-              <a href="#modal-terms-service" data-bs-toggle="modal"
-                >서비스 이용약관</a
+              <router-link to="#modal-terms-service" data-bs-toggle="modal"
+                >서비스 이용약관</router-link
               >
             </li>
             <li>
-              <a href="#modal-terms-privacy" data-bs-toggle="modal"
-                >개인정보처리방침</a
+              <router-link to="#modal-terms-privacy" data-bs-toggle="modal"
+                >개인정보처리방침</router-link
               >
             </li>
             <li>
-              <a href="#modal-terms-privacy-use" data-bs-toggle="modal"
-                >개인정보 수집 및 이용 동의</a
+              <router-link to="#modal-terms-privacy-use" data-bs-toggle="modal"
+                >개인정보 수집 및 이용 동의</router-link
               >
             </li>
           </ul>
@@ -25,19 +25,11 @@
           <ul class="menu-list">
             <li class="d-block">
               <div class="d-flex align-items-center justify-content-between">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="agreeMarketing"
-                  />
-                  <label class="form-check-label" for="agreeMarketing">
-                    마케팅 / 광고성 정보 수신 동의
-                  </label>
-                </div>
-                <a
-                  href="#collapse-agree-marketing"
+                <VCheckbox id="agreeMarketing"
+                  >마케팅 / 광고성 정보 수신 동의</VCheckbox
+                >
+                <router-link
+                  to="#collapse-agree-marketing"
                   class="agree-toggler"
                   data-bs-toggle="collapse"
                   role="button"
@@ -45,7 +37,7 @@
                   aria-controls="collapse-agree-marketing"
                   aria-label="선택항목 상세보기 토글"
                   ><i class="icon-arrow-right"></i
-                ></a>
+                ></router-link>
               </div>
               <div class="collapse" id="collapse-agree-marketing">
                 <div class="box mt-4">
@@ -56,30 +48,10 @@
                   <div class="px-2 mt-4">
                     <div class="row gx-0">
                       <div class="col">
-                        <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value=""
-                            id="agreePush"
-                          />
-                          <label class="form-check-label" for="agreePush"
-                            >앱 푸시</label
-                          >
-                        </div>
+                        <VCheckbox id="agreePush">앱 푸시</VCheckbox>
                       </div>
                       <div class="col">
-                        <div class="form-check">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            value=""
-                            id="agreeAlarm"
-                          />
-                          <label class="form-check-label" for="agreeAlarm"
-                            >알림톡</label
-                          >
-                        </div>
+                        <VCheckbox id="agreeAlarm">알림톡</VCheckbox>
                       </div>
                     </div>
                   </div>
@@ -157,13 +129,27 @@
 </template>
 
 <script>
+import VCheckbox from "@/templates/elements/VCheckbox";
+
 export default {
   name: "Terms",
-  components: {},
+  components: {
+    VCheckbox
+  },
 
   mounted() {},
   setup() {}
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.agree-toggler {
+  display: block;
+  width: 30px;
+  height: 30px;
+  transform: rotate(90deg);
+  &[aria-expanded="true"]::before {
+    transform: rotate(270deg);
+  }
+}
+</style>

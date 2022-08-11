@@ -54,4 +54,48 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.grow-up-success {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  &::before {
+    content: "";
+    display: block;
+    width: 315px;
+    height: 160px;
+    position: absolute;
+    left: 50%;
+    top: -160px;
+    transform: translateX(-50%);
+    opacity: 0;
+    top: -100px;
+    z-index: -1;
+    transition: all 0.5s 0.3s ease;
+  }
+  .modal.show & {
+    &::before {
+      top: -160px;
+      opacity: 1;
+    }
+  }
+  &[class^="grow-up-success"] {
+    &::before {
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+    &.grow-up-success-1::before {
+      background-image: url("#{$IMG_PATH}/bg-grow-up-1.svg");
+    }
+    &.grow-up-success-2::before {
+      background-image: url("#{$IMG_PATH}/bg-grow-up-2.svg");
+    }
+    &.grow-up-success-3::before {
+      background-image: url("#{$IMG_PATH}/bg-grow-up-3.svg");
+    }
+    &.grow-up-success-4::before {
+      background-image: url("#{$IMG_PATH}/bg-grow-up-4.svg");
+    }
+  }
+}
+</style>

@@ -1,0 +1,28 @@
+
+.menubar{
+  position: fixed;left: 0;right: 0;bottom: 0;
+  display: flex;text-align: center;background: #fff;z-index: $Z_INDEX_MENUBAR;
+  a{
+      flex: 1 1 auto;line-height: 1;color: #aaa;font-size: 11px;letter-spacing: -0.44px;
+      padding: 10px 0;
+      padding-bottom: calc(constant(safe-area-inset-bottom) + 10px);
+      padding-bottom: calc(env(safe-area-inset-bottom) + 10px);
+      &.active{color: $primary;}
+      span{
+          text-align: center;vertical-align: top;
+          &::before{content: '';display: block;width: 24px;height: 24px;background-repeat: no-repeat;background-position: 0 0;margin: 0 auto 5px;}
+      }
+  }
+  .menu-meditation{
+      span::before{background-image: url('#{$IMG_PATH}/icon-gnb-seed-off.svg');}
+      &.active span::before{background-image: url('#{$IMG_PATH}/icon-gnb-seed-on.svg');}
+  }
+  .menu-home{
+      span::before{background-image: url('#{$IMG_PATH}/icon-gnb-menu-off.svg');}
+      &.active span::before{background-image: url('#{$IMG_PATH}/icon-gnb-menu-on.svg');}
+  }
+  .menu-my{
+      span::before{background-image: url('#{$IMG_PATH}/icon-gnb-person-off.svg');}
+      &.active span::before{background-image: url('#{$IMG_PATH}/icon-gnb-person-on.svg');}
+  }
+}

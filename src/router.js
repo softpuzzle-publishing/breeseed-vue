@@ -140,6 +140,10 @@ const routes = [
   {
     path: "/my-password-reset",
     component: () => import("./views/my/MyPasswordReset")
+  },
+  {
+    path: "/terms",
+    component: () => import("./views/util/Terms")
   }
 ];
 

@@ -10,15 +10,24 @@
     <div id="container">
       <slot />
     </div>
+    <TheMenubar
+      v-if="
+        $route.path == '/home' ||
+          $route.path == '/program' ||
+          $route.path == '/my-home'
+      "
+    />
   </div>
 </template>
 
 <script>
 import TheHeader from "./TheHeader";
+import TheMenubar from "./TheMenubar";
 
 export default {
   components: {
-    TheHeader
+    TheHeader,
+    TheMenubar
   }
 };
 </script>

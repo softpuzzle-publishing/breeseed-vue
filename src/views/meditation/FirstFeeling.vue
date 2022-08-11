@@ -76,4 +76,45 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.feeling-choice {
+  display: flex;
+  margin-top: 34px;
+  input[type="radio"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    &:checked + label {
+      span.bad {
+        background-image: url("#{$IMG_PATH}/feel-bad-on.svg");
+      }
+      span.good {
+        background-image: url("#{$IMG_PATH}/feel-good-on.svg");
+      }
+    }
+  }
+  label {
+    display: block;
+    text-align: center;
+    flex: 0 0 50%;
+    font-size: 15px;
+    color: #aaa;
+    span {
+      display: block;
+      width: 90px;
+      height: 90px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      margin: 0 auto 10px;
+      &.bad {
+        background-image: url(#{$IMG_PATH}/feel-bad-off.svg);
+      }
+      &.good {
+        background-image: url(#{$IMG_PATH}/feel-good-off.svg);
+      }
+    }
+  }
+}
+</style>

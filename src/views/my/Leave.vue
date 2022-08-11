@@ -7,91 +7,24 @@
           <br />모든 기록이 영구적으로 사라지며 복구가 불가능합니다.
         </p>
         <div class="agree point">
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="agreeLeave"
-            />
-            <label class="form-check-label font-size-13" for="agreeLeave">
-              위 내용을 모두 확인하였으며, 이에 동의합니다.
-            </label>
-          </div>
+          <VCheckbox id="agreeLeave"
+            >위 내용을 모두 확인하였으며, 이에 동의합니다.</VCheckbox
+          >
         </div>
         <div class="mt-6">
           <p class="leave-reason-title">
             회원 탈퇴 사유를 1개 이상 선택해주세요.
           </p>
-          <div class="form-check my-4">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="reason"
-              id="reason1"
-              data-enpassusermodified="yes"
-            />
-            <label class="form-check-label" for="reason1">
-              컨텐츠가 어려웠어요.
-            </label>
-          </div>
-          <div class="form-check my-4">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="reason"
-              id="reason2"
-              data-enpassusermodified="yes"
-            />
-            <label class="form-check-label" for="reason2">
-              컨텐츠가 더 많았으면 좋겠어요.
-            </label>
-          </div>
-          <div class="form-check my-4">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="reason"
-              id="reason3"
-              data-enpassusermodified="yes"
-            />
-            <label class="form-check-label" for="reason3">
-              바빠서 자주 사용하지 않습니다.
-            </label>
-          </div>
-          <div class="form-check my-4">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="reason"
-              id="reason4"
-            />
-            <label class="form-check-label" for="reason4">
-              앱 사용이 불편했어요.
-            </label>
-          </div>
-          <div class="form-check my-4">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="reason"
-              id="reason5"
-            />
-            <label class="form-check-label" for="reason5">
-              원하는 기능이 없어요
-            </label>
-          </div>
-          <div class="form-check my-4">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="reason"
-              id="reason6"
-            />
-            <label class="form-check-label" for="reason6">
-              기타
-            </label>
-          </div>
+          <VCheckbox id="reason1" class="my-4">컨텐츠가 어려웠어요.</VCheckbox>
+          <VCheckbox id="reason2" class="my-4"
+            >컨텐츠가 더 많았으면 좋겠어요.</VCheckbox
+          >
+          <VCheckbox id="reason3" class="my-4"
+            >바빠서 자주 사용하지 않습니다.</VCheckbox
+          >
+          <VCheckbox id="reason4" class="my-4">앱 사용이 불편했어요.</VCheckbox>
+          <VCheckbox id="reason5" class="my-4">원하는 기능이 없어요.</VCheckbox>
+          <VCheckbox id="reason6" class="my-4">기타</VCheckbox>
           <div>
             <VTextarea rows="2"></VTextarea>
           </div>
@@ -145,16 +78,40 @@
 <script>
 import VButton from "@/templates/elements/VButton";
 import VTextarea from "@/templates/elements/VTextarea";
+import VCheckbox from "@/templates/elements/VCheckbox";
 
 export default {
   name: "Leave",
   components: {
     VButton,
-    VTextarea
+    VTextarea,
+    VCheckbox
   },
 
   setup() {}
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+.leave-top-text {
+  & + .agree.point {
+    label {
+      font-size: 13px;
+    }
+  }
+}
+</style>
+<style lang="scss" scoped>
+.leave-top-text {
+  font-size: 15px;
+  margin-bottom: 10px;
+  letter-spacing: -0.9px;
+}
+.leave-reason-title {
+  font-size: 13px;
+  letter-spacing: -0.52px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+  margin-bottom: 1.5rem;
+}
+</style>

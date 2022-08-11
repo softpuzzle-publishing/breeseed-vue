@@ -35,69 +35,29 @@
             </div>
             <div class="row gx-0 mb-2">
               <div class="col-6">
-                <div class="form-check my-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="bgMusic"
-                    id="bgMusic1"
-                  />
-                  <label class="form-check-label" for="bgMusic1">
-                    빗소리
-                  </label>
-                </div>
+                <VRadio id="bgMusic1" name="bgMusic" class="my-2"
+                  >빗소리</VRadio
+                >
               </div>
               <div class="col-6">
-                <div class="form-check my-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="bgMusic"
-                    id="bgMusic2"
-                  />
-                  <label class="form-check-label" for="bgMusic2">
-                    장작소리
-                  </label>
-                </div>
+                <VRadio id="bgMusic2" name="bgMusic" class="my-2"
+                  >장작소리</VRadio
+                >
               </div>
               <div class="col-6">
-                <div class="form-check my-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="bgMusic"
-                    id="bgMusic3"
-                  />
-                  <label class="form-check-label" for="bgMusic3">
-                    파도소리
-                  </label>
-                </div>
+                <VRadio id="bgMusic3" name="bgMusic" class="my-2"
+                  >파도소리</VRadio
+                >
               </div>
               <div class="col-6">
-                <div class="form-check my-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="bgMusic"
-                    id="bgMusic4"
-                  />
-                  <label class="form-check-label" for="bgMusic4">
-                    도시소리
-                  </label>
-                </div>
+                <VRadio id="bgMusic4" name="bgMusic" class="my-2"
+                  >도시소리</VRadio
+                >
               </div>
               <div class="col-6">
-                <div class="form-check my-2">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="bgMusic"
-                    id="bgMusic5"
-                  />
-                  <label class="form-check-label" for="bgMusic5">
-                    숲소리
-                  </label>
-                </div>
+                <VRadio id="bgMusic5" name="bgMusic" class="my-2"
+                  >숲소리</VRadio
+                >
               </div>
             </div>
           </div>
@@ -120,12 +80,14 @@
 <script>
 import VButton from "@/templates/elements/VButton";
 import VSwitch from "@/templates/elements/VSwitch";
+import VRadio from "@/templates/elements/VRadio";
 
 export default {
   name: "AudioSetting",
   components: {
     VButton,
-    VSwitch
+    VSwitch,
+    VRadio
   },
 
   mounted() {
@@ -137,4 +99,31 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.setting-item {
+  & + .setting-item {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 17px;
+    padding-top: 20px;
+  }
+}
+
+.sound-controler {
+  padding: 0 15px;
+  .form-range {
+    margin: 0 12px;
+  }
+  .icon-horn-off,
+  .icon-horn-on {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+  }
+  .icon-horn-off {
+    background-image: url("#{$IMG_PATH}/icon-horn-off.svg");
+  }
+  .icon-horn-on {
+    background-image: url("#{$IMG_PATH}/icon-horn-on.svg");
+  }
+}
+</style>

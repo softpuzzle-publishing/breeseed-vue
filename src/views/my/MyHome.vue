@@ -6,9 +6,11 @@
         <!-- 마이메뉴 -->
         <h2 class="menu-title">마이메뉴</h2>
         <ul class="menu-list">
-          <li><a href="../my/my_info.html">내 계정</a></li>
-          <li><a href="">평점 남기기</a></li>
-          <li><a href="../my/my_history_list.html">구매내역</a></li>
+          <li><router-link to="/my-info">내 계정</router-link></li>
+          <li><router-link to="">평점 남기기</router-link></li>
+          <li>
+            <router-link to="/my-history-list">구매내역</router-link>
+          </li>
         </ul>
         <!-- 알림 -->
         <h2 class="menu-title m-t-40">알림</h2>
@@ -27,29 +29,29 @@
         <!-- 정보 -->
         <h2 class="menu-title m-t-40">정보</h2>
         <ul class="menu-list">
-          <li><a href="">약관 및 정책</a></li>
-          <li><a href="">오픈소스 라이선스</a></li>
+          <li><router-link to="/terms">약관 및 정책</router-link></li>
+          <li><router-link to="">오픈소스 라이선스</router-link></li>
           <li>
-            <a
-              href=""
+            <router-link
+              to=""
               class="d-flex justify-content-between align-items-center"
             >
               버전정보
               <span class="text-primary">1.0.0</span>
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
       <footer id="footer">
         <div class="container-fluid">
-          <a
-            href="#toggle-company-info"
+          <router-link
+            to="#toggle-company-info"
             class="company-info-toggler"
             data-bs-toggle="collapse"
             role="button"
             aria-expanded="false"
             aria-controls="toggle-company-info"
-            >사업자 정보</a
+            >사업자 정보</router-link
           >
           <dl class="company-info collapse" id="toggle-company-info">
             <dt>상호</dt>
@@ -83,4 +85,66 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.my-nick {
+  background: $primary;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: -0.72px;
+  border-radius: 10px;
+  padding: 17px 20px;
+  margin-bottom: 30px;
+}
+
+#footer {
+  background: #404040;
+  margin-left: -30px;
+  margin-right: -30px;
+  color: #fff;
+  margin-bottom: -30px;
+  padding-bottom: 90px;
+  margin-top: 20px;
+}
+.company-info {
+  font-size: 13px;
+  padding-bottom: 10px;
+  dt {
+    clear: left;
+    float: left;
+  }
+  dd {
+    text-align: right;
+    margin-bottom: 15px;
+  }
+}
+.company-info-toggler {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  padding-right: 40px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  &::before {
+    content: "";
+    background: url("#{$IMG_PATH}/icon-arrow-right.svg") no-repeat 0 0;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+    transform: rotate(90deg);
+  }
+  &[aria-expanded="true"]::before {
+    transform: rotate(270deg);
+  }
+}
+.copyright {
+  font-size: 13px;
+  letter-spacing: -0.52px;
+}
+</style>

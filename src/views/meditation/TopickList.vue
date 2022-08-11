@@ -7,35 +7,22 @@
             토픽명상설명문구두줄오십자토픽명상설명문구두줄오십자토픽명상설명문구두줄오십자토픽명상설명문구두줄오십자
           </div>
           <div class="text-center m-t-30">
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="voice"
-                id="voiceMail"
-                checked
-              />
-              <label class="form-check-label" for="voiceMail">
-                남자 보이스
-              </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="voice"
-                id="voiceFeail"
-              />
-              <label class="form-check-label" for="voiceFeail">
-                여자 보이스
-              </label>
-            </div>
+            <VRadio
+              id="voiceMail"
+              name="voice"
+              class="form-check-inline"
+              checked
+              >남자 보이스</VRadio
+            >
+            <VRadio id="voiceFemail" name="voice" class="form-check-inline"
+              >여자 보이스</VRadio
+            >
           </div>
           <div class="gallery">
             <div class="program-item m-t-40">
-              <a href="#none" class="program-thumb">
+              <router-link to="#none" class="program-thumb">
                 <img :src="resourceManager.getIMG('/@thumbnail.png')" />
-              </a>
+              </router-link>
               <div class="program-title">토픽명상타이틀제목명</div>
               <div class="program-type">10분</div>
               <div class="program-desc">
@@ -50,9 +37,13 @@
 </template>
 
 <script>
+import VRadio from "@/templates/elements/VRadio";
+
 export default {
   name: "TopickList",
-  components: {},
+  components: {
+    VRadio
+  },
 
   mounted() {},
   setup() {}

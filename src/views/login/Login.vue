@@ -119,4 +119,22 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.login-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  a {
+    font-size: 15px;
+    letter-spacing: -0.9px;
+  }
+}
+.bar {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: #e5e5e5;
+  margin: 0 12px;
+}
+</style>

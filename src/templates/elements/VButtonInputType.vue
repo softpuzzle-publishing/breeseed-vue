@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import(`${process.env.VUE_APP_SCSS_PATH}/elements/_v-button-input-type.scss`);
+
 export default {
   name: "VButtonInputType",
 
