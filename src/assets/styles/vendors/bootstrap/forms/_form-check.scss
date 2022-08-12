@@ -31,7 +31,7 @@
 
   &[type="checkbox"] {
     border: 0;
-    background: url('#{$IMG_PATH}/checkbox.svg') no-repeat 50% 50%;
+    background: url('../images/checkbox.svg') no-repeat 50% 50%;
     @include border-radius($form-check-input-border-radius);
   }
 
@@ -57,10 +57,10 @@
     &[type="checkbox"] {
         border-radius: 50rem;
         @if $enable-gradients {
-            background-image: url('#{$IMG_PATH}/checkbox-checked.svg');
+            background-image: url('../images/checkbox-checked.svg');
             //background-image: escape-svg($form-check-input-checked-bg-image), var(--#{$variable-prefix}gradient);
         } @else {
-          background-image: url('#{$IMG_PATH}/checkbox-checked.svg');
+          background-image: url('../images/checkbox-checked.svg');
           //background-image: escape-svg($form-check-input-checked-bg-image);
       }
     }

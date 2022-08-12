@@ -102,6 +102,10 @@ const routes = [
     component: () => import("./views/program/Program")
   },
   {
+    path: "/grow-seed",
+    component: () => import("./views/program/GrowSeed")
+  },
+  {
     path: "/my-history-list",
     component: () => import("./views/my/MyHistoryList")
   },

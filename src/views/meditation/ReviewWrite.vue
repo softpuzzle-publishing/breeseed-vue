@@ -10,8 +10,8 @@
           <div class="desc">
             과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명글자수백자내외권장
           </div>
-          <VTextarea rows="2" class="auto-growing"
-            >과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명글자수백자내외권장</VTextarea
+          <VTextareaFake
+            >과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명글자수백자내외권장</VTextareaFake
           >
           <div class="length-count"><strong>0</strong> / 250</div>
         </div>
@@ -27,13 +27,13 @@
 
 <script>
 import VButton from "@/templates/elements/VButton";
-import VTextarea from "@/templates/elements/VTextarea";
+import VTextareaFake from "@/templates/elements/VTextareaFake";
 
 export default {
   name: "ReviewWrite",
   components: {
     VButton,
-    VTextarea
+    VTextareaFake
   },
 
   mounted() {},

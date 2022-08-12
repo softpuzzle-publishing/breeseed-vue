@@ -5,7 +5,7 @@
         <ProgramSidebar></ProgramSidebar>
       </aside>
       <router-link
-        to=""
+        to="/grow-seed"
         class="btn-grow-seed"
         aria-label="씨앗 키우기"
       ></router-link>
@@ -35,7 +35,7 @@ export default {
     //로드 후 .show 추가
     setTimeout(function() {
       document.querySelector(".program").classList.add("show");
-    }, 10);
+    }, 100);
   },
   setup() {}
 };
@@ -48,7 +48,7 @@ export default {
 
 .program {
   opacity: 0;
-  transition: opacity 0.25s 0.05s;
+  transition: opacity 0.35s 0.05s;
   margin-left: $SIDEBAR_WIDTH;
   height: 100%;
   padding: 46px 0 60px;
